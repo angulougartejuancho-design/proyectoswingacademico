@@ -23,7 +23,7 @@ public class CursoNegocio {
     public CursoNegocio() {
         repositorio = new CursoRepositorio();
     }
-
+              //registrar
     public void registrar(Curso curso)
             throws DatoInvalidoException,
             RegistroDuplicadoException {
@@ -33,7 +33,7 @@ public class CursoNegocio {
         if (repositorio.existeCodigo(curso.getCodigo())) {
 
             throw new RegistroDuplicadoException(
-                    "Ya existe un curso con ese código."
+                    "Ya existe un curso con este mismo código."
             );
         }
 
@@ -51,7 +51,7 @@ public class CursoNegocio {
                 curso.getId())) {
 
             throw new RegistroDuplicadoException(
-                    "Ese código pertenece a otro curso."
+                    "Este código pertenece a otro curso."
             );
         }
 
